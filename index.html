@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TraCalorie | JS Module Pattern</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./src/img/TraCalorie.svg" />
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d1a98e8057.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <style>
+      .modal {
+        width: 40% !important ;
+        height: 20% !important ;
+      }
+      .modal-content{
+        padding: 8px 10px !important ;
+      }
+      .delete-btn, .update-btn, .back-btn{
+        display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper grey darken-3">
+        <div class="container">
+          <img
+            src="./src/img/TraCalorie.png"
+            width="63"
+            height="63"
+            alt="brand-logo"
+          />
+          <a href="#" class="brand-logo center"> TraCalorie </a>
+          <ul class="right">
+            <li>
+              <a href="#" class="clear-btn btn grey lighten-0">Clear All</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-title">Add Meal / Food Item</div>
+              <div class="row">
+                <div class="col s12">
+                  <form>
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input
+                          type="text"
+                          placeholder="Add Item"
+                          id="item-name"
+                        /><label for="item-name">Meal</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input
+                          type="number" min="0"
+                          placeholder="Add Calories"
+                          id="item-calories"
+                        /><label for="item-calories">Calories</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <button class="add-btn btn blue darken-3">
+                          <i class="fa-solid fa-plus"></i> Add Meal
+                        </button>
+                        <button class="update-btn btn blue orange">
+                          <i class="fa-solid fa-pencil"></i> Update Meal
+                        </button>
+                        <button class="delete-btn btn red">
+                          <i class="fa-solid fa-remove"></i> Delete Meal
+                        </button>
+                        <button class="back-btn btn blue grey right">
+                          <i class="fa-solid fa-chevron-left"></i> Back
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+          <h3 class="center">
+            Total Calories: <span class="total-calories"></span>
+          </h3>
+          <ul class="collection" id="item-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal12" class="modal">
+      <div class="modal-content">
+        <h5></h5>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+          <a href="#!" class="waves-effect waves-red btn-flat dialog-cancel-btn"
+            >Cancel</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>
