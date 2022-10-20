@@ -97,6 +97,8 @@ const App = (function (UIController, itemController, storageController) {
       itemController.setCurrentItem(null);
       UIController.clearInputs();
       UIController.clearEditState();
+      const total_calories = itemController.getTotalCalories();
+      UIController.showTotalCalories(total_calories);
       UIController.showAlert("Item updated", "rounded green");
     }
   };
